@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-         content="Lumos𝒳: Relate Any Identities with Their Attributes for Personalized Video Generation">
-  <meta name="keywords" content="watermarking, diffusion models, computer vision, security, machine learning, inference time optimization">
+         content="Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models">
+  <meta name="keywords" content="video unified models, video generation, video reasonable benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lumos𝒳: Relate Any Identities with Their Attributes for Personalized Video Generation</title>
+  <meta property="og:title" content="Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models">
+  <meta property="og:description" content="Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models">
+  <meta name="twitter:title" content="Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models">
+  <meta name="twitter:description" content="Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models">
+  <title>Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -46,205 +50,6 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   
-  <script>
-    // Arrow navigation functionality for first section
-    let currentCase = 1;
-    
-    function showCase(caseNumber) {
-      // Hide all case contents
-      document.getElementById('case-1-content').style.display = 'none';
-      document.getElementById('case-2-content').style.display = 'none';
-      document.getElementById('case-3-content').style.display = 'none';
-      
-      // Show selected case content
-      document.getElementById('case-' + caseNumber + '-content').style.display = 'block';
-      
-      // Update current case
-      currentCase = caseNumber;
-      
-      // Update page indicator
-      document.getElementById('page-indicator').textContent = caseNumber + ' / 3';
-      
-      // Update arrow button states
-      const prevArrow = document.getElementById('prev-arrow');
-      const nextArrow = document.getElementById('next-arrow');
-      
-      if (caseNumber === 1) {
-        prevArrow.style.opacity = '0.3';
-        prevArrow.style.cursor = 'not-allowed';
-        prevArrow.disabled = true;
-        nextArrow.style.opacity = '1';
-        nextArrow.style.cursor = 'pointer';
-        nextArrow.disabled = false;
-      } else if (caseNumber === 3) {
-        prevArrow.style.opacity = '1';
-        prevArrow.style.cursor = 'pointer';
-        prevArrow.disabled = false;
-        nextArrow.style.opacity = '0.3';
-        nextArrow.style.cursor = 'not-allowed';
-        nextArrow.disabled = true;
-      } else {
-        // Case 2 (middle case)
-        prevArrow.style.opacity = '1';
-        prevArrow.style.cursor = 'pointer';
-        prevArrow.disabled = false;
-        nextArrow.style.opacity = '1';
-        nextArrow.style.cursor = 'pointer';
-        nextArrow.disabled = false;
-      }
-    }
-    
-    // Arrow navigation functionality for second section
-    let currentCase2 = 1;
-    
-    function showCase2(caseNumber) {
-      // Hide all case contents
-      document.getElementById('case-1-content-2').style.display = 'none';
-      document.getElementById('case-2-content-2').style.display = 'none';
-      document.getElementById('case-3-content-2').style.display = 'none';
-      
-      // Show selected case content
-      document.getElementById('case-' + caseNumber + '-content-2').style.display = 'block';
-      
-      // Update current case
-      currentCase2 = caseNumber;
-      
-      // Update page indicator
-      document.getElementById('page-indicator-2').textContent = caseNumber + ' / 3';
-      
-      // Update arrow button states
-      const prevArrow2 = document.getElementById('prev-arrow-2');
-      const nextArrow2 = document.getElementById('next-arrow-2');
-      
-      if (caseNumber === 1) {
-        prevArrow2.style.opacity = '0.3';
-        prevArrow2.style.cursor = 'not-allowed';
-        prevArrow2.disabled = true;
-        nextArrow2.style.opacity = '1';
-        nextArrow2.style.cursor = 'pointer';
-        nextArrow2.disabled = false;
-      } else if (caseNumber === 3) {
-        prevArrow2.style.opacity = '1';
-        prevArrow2.style.cursor = 'pointer';
-        prevArrow2.disabled = false;
-        nextArrow2.style.opacity = '0.3';
-        nextArrow2.style.cursor = 'not-allowed';
-        nextArrow2.disabled = true;
-      } else {
-        // Case 2 (middle case)
-        prevArrow2.style.opacity = '1';
-        prevArrow2.style.cursor = 'pointer';
-        prevArrow2.disabled = false;
-        nextArrow2.style.opacity = '1';
-        nextArrow2.style.cursor = 'pointer';
-        nextArrow2.disabled = false;
-      }
-    }
-    
-    // Arrow navigation functionality for Subject-Consistent Video Generation section
-    let currentCaseSubject = 1;
-    
-    function showCaseSubject(caseNumber) {
-      // Hide all case contents
-      document.getElementById('case-1-content-subject').style.display = 'none';
-      document.getElementById('case-2-content-subject').style.display = 'none';
-      document.getElementById('case-3-content-subject').style.display = 'none';
-      document.getElementById('case-4-content-subject').style.display = 'none';
-      
-      // Show selected case content
-      document.getElementById('case-' + caseNumber + '-content-subject').style.display = 'block';
-      
-      // Update current case
-      currentCaseSubject = caseNumber;
-      
-      // Update page indicator
-      document.getElementById('page-indicator-subject').textContent = caseNumber + ' / 4';
-      
-      // Update arrow button states
-      const prevArrowSubject = document.getElementById('prev-arrow-subject');
-      const nextArrowSubject = document.getElementById('next-arrow-subject');
-      
-      if (caseNumber === 1) {
-        prevArrowSubject.style.opacity = '0.3';
-        prevArrowSubject.style.cursor = 'not-allowed';
-        prevArrowSubject.disabled = true;
-        nextArrowSubject.style.opacity = '1';
-        nextArrowSubject.style.cursor = 'pointer';
-        nextArrowSubject.disabled = false;
-      } else if (caseNumber === 4) {
-        prevArrowSubject.style.opacity = '1';
-        prevArrowSubject.style.cursor = 'pointer';
-        prevArrowSubject.disabled = false;
-        nextArrowSubject.style.opacity = '0.3';
-        nextArrowSubject.style.cursor = 'not-allowed';
-        nextArrowSubject.disabled = true;
-      } else {
-        // Case 2 or 3 (middle cases)
-        prevArrowSubject.style.opacity = '1';
-        prevArrowSubject.style.cursor = 'pointer';
-        prevArrowSubject.disabled = false;
-        nextArrowSubject.style.opacity = '1';
-        nextArrowSubject.style.cursor = 'pointer';
-        nextArrowSubject.disabled = false;
-      }
-    }
-    
-    // Arrow navigation functionality for Second Subject-Consistent Video Generation section
-    let currentCaseSubject2 = 1;
-    
-    function showCaseSubject2(caseNumber) {
-      // Hide all case contents
-      document.getElementById('case-1-content-subject-2').style.display = 'none';
-      document.getElementById('case-2-content-subject-2').style.display = 'none';
-      document.getElementById('case-3-content-subject-2').style.display = 'none';
-      document.getElementById('case-4-content-subject-2').style.display = 'none';
-      
-      // Show selected case content
-      document.getElementById('case-' + caseNumber + '-content-subject-2').style.display = 'block';
-      
-      // Update current case
-      currentCaseSubject2 = caseNumber;
-      
-      // Update page indicator
-      document.getElementById('page-indicator-subject-2').textContent = caseNumber + ' / 4';
-      
-      // Update arrow button states
-      const prevArrowSubject2 = document.getElementById('prev-arrow-subject-2');
-      const nextArrowSubject2 = document.getElementById('next-arrow-subject-2');
-      
-      if (caseNumber === 1) {
-        prevArrowSubject2.style.opacity = '0.3';
-        prevArrowSubject2.style.cursor = 'not-allowed';
-        prevArrowSubject2.disabled = true;
-        nextArrowSubject2.style.opacity = '1';
-        nextArrowSubject2.style.cursor = 'pointer';
-        nextArrowSubject2.disabled = false;
-      } else if (caseNumber === 4) {
-        prevArrowSubject2.style.opacity = '1';
-        prevArrowSubject2.style.cursor = 'pointer';
-        prevArrowSubject2.disabled = false;
-        nextArrowSubject2.style.opacity = '0.3';
-        nextArrowSubject2.style.cursor = 'not-allowed';
-        nextArrowSubject2.disabled = true;
-      } else {
-        // Case 2-3 (middle cases)
-        prevArrowSubject2.style.opacity = '1';
-        prevArrowSubject2.style.cursor = 'pointer';
-        prevArrowSubject2.disabled = false;
-        nextArrowSubject2.style.opacity = '1';
-        nextArrowSubject2.style.cursor = 'pointer';
-        nextArrowSubject2.disabled = false;
-      }
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize all sections with case 1
-      showCase(1);
-      showCase2(1);
-      showCaseSubject(1);
-      showCaseSubject2(1);
-    });
-  </script>
 </head>
 <body>
 
@@ -263,48 +68,55 @@
   </nav>
 
 
-  <section class="hero">
+  <section class="hero paper-header">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-              <img src="static/images/redketchup/apple-touch-icon.png" alt="Lumos𝒳 Icon" style="width: 130px; height: 130px; flex-shrink: 0;">
+              <img src="static/images/image.png" alt="Lumos-Nexus" style="width: 180px; height: 180px; flex-shrink: 0;">
               <h1 class="title is-1 publication-title" style="margin: 0; flex: 1;">
-                Lumos𝒳: Relate Any Identities with Their Attributes for Personalized Video Generation
+                Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models
               </h1>
             </div>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="#" target="_blank">Jiazheng Xing</a><sup>1,4,2*</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Fei Du</a><sup>2,3*</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Hangjie Yuan</a><sup>2,3,1*</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Pengwei Liu</a><sup>1,2</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Hongbin Xu</a><sup>4</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Hai Ci</a><sup>4</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Ruigang Niu</a><sup>2,3</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Weihua Chen</a><sup>2,3†</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Fan Wang</a><sup>2</sup>,</span>
-              <span class="author-block">
-                <a href="#" target="_blank">Yong Liu</a><sup>1†</sup></span>
+
+            <div class="is-size-5 publication-authors" style="line-height: 1.6;">
+              <span class="author-block">Jiazheng Xing<sup>*1,4,2</sup></span>,
+              <span class="author-block">Hangjie Yuan<sup>*‡2,3,1</sup></span>,
+              <span class="author-block">Lingling Cai<sup>1</sup></span>,
+              <span class="author-block">Xinyu Liu<sup>5</sup></span>,
+              <span class="author-block">Yujie Wei<sup>6</sup></span>,
+              <span class="author-block">Fei Du<sup>2,3</sup></span>,
+              <span class="author-block">Hai Ci<sup>4</sup></span>,
+              <span class="author-block">Tao Feng<sup>7</sup></span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="line-height: 1.6; margin-top: 0.35rem;">
+              <span class="author-block">Jiasheng Tang<sup>2,3</sup></span>,
+              <span class="author-block">Weihua Chen<sup>†2,3</sup></span>,
+              <span class="author-block">Fan Wang<sup>2</sup></span>,
+              <span class="author-block">Yong Liu<sup>†1</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-affiliations" style="margin-top: 1rem; line-height: 1.65;">
               <span class="author-block"><sup>1</sup>Zhejiang University</span><br>
               <span class="author-block"><sup>2</sup>DAMO Academy, Alibaba Group</span><br>
               <span class="author-block"><sup>3</sup>Hupan Lab</span><br>
               <span class="author-block"><sup>4</sup>National University of Singapore</span><br>
-              <span class="eql-cntrb"><small><sup>*</sup>Equal contribution</small></span><br>
-              <span class="eql-cntrb"><small><sup>†</sup>Corresponding authors.</small></span>
+              <span class="author-block"><sup>5</sup>Hong Kong University of Science and Technology</span><br>
+              <span class="author-block"><sup>6</sup>Fudan University</span><br>
+              <span class="author-block"><sup>7</sup>Tsinghua University</span>
             </div>
+
+            <div class="author-footnotes" style="margin-top: 0.75rem; line-height: 1.5;">
+              <span class="eql-cntrb"><sup>*</sup>Equal contribution</span><br>
+              <span class="eql-cntrb"><sup>‡</sup>Project lead</span><br>
+              <span class="eql-cntrb"><sup>†</sup>Corresponding authors</span>
+            </div>
+
+            <p class="author-emails">
+              jiazhengxing@zju.edu.cn, kugang.cwh@alibaba-inc.com, yongliu@iipc.zju.edu.cn
+            </p>
 
 
             <div class="column has-text-centered">
@@ -397,672 +209,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advances in diffusion models have significantly improved text-to-video generation, enabling personalized content creation with fine-grained control over both foreground and background elements. However, precise face–attribute alignment across subjects remains challenging, as existing methods lack explicit mechanisms to ensure intra-group consistency. Addressing this gap requires both explicit modeling strategies and face-attribute-aware data resources. We therefore propose <strong>Lumos𝒳</strong>, a framework that advances both data and model design. On the data side, a tailored collection pipeline orchestrates captions and visual cues from independent videos, while multimodal large language models (MLLMs) infer and assign subject-specific dependencies. These extracted relational priors impose a finer-grained structure that amplifies the expressive control of personalized video generation and enables the construction of a comprehensive benchmark. On the modeling side, Relational Self-Attention and Relational Cross-Attention intertwine position-aware embeddings with refined attention dynamics to inscribe explicit subject–attribute dependencies, enforcing disciplined intra-group cohesion and amplifying the separation between distinct subject clusters. Comprehensive evaluations on our benchmark demonstrate that Lumos𝒳 achieves state-of-the-art performance in fine-grained, identity-consistent, and semantically aligned personalized multi-subject video generation.
+            Connector-based video unified models have demonstrated strong capability in instruction-grounded video synthesis, but integrating a large high-fidelity generator into the unified training loop is computationally prohibitive, limiting achievable visual quality.
+            We therefore propose <strong>Lumos-Nexus</strong>, a training-efficient unified video generation framework that facilitates the development of strong reasoning-driven generation capabilities while significantly enhancing visual fidelity.
+            Lumos-Nexus adopts a two-stage design: 1) During training, only a lightweight generator is aligned with the understanding block to learn to take in reasoning-driven semantic control. 2) During inference, we introduce Unified Progressive Frequency Bridging (UPFB) to progressively hand off generation to a high-capacity pretrained generator in the shared latent space, enabling coarse-to-fine refinement and producing high-fidelity videos without compromising reasoning quality.
+            To fill the gap in reasoning-driven video generation benchmarks, we introduce VR-Bench, which assesses a model's capability to translate inferred intent into coherent and semantically aligned video content.
+            Extensive experiments demonstrate that Lumos-Nexus achieves substantial gains in visual realism and temporal coherence on VBench, while exhibiting strong reasoning-based generative performance on VR-Bench.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Results Section -->
-        <h2 class="title is-3 has-text-centered">Identity-Consistent Video Generation</h2>
-        
-        <!-- Arrow Navigation -->
-        <div style="position: relative; margin-bottom: 0; min-height: 400px;">
-          <!-- Left Arrow -->
-          <button id="prev-arrow" class="arrow-btn" onclick="if(currentCase > 1) showCase(currentCase - 1)" style="position: absolute; left: -50px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            ←
-          </button>
-          
-          <!-- Right Arrow -->
-          <button id="next-arrow" class="arrow-btn" onclick="if(currentCase < 3) showCase(currentCase + 1)" style="position: absolute; right: -50px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            →
-          </button>
-          
-          <!-- Page Indicator -->
-          <div style="position: absolute; top: -10px; right: -20px; background: rgba(0,0,0,0.6); color: white; padding: 6px 12px; border-radius: 15px; font-size: 12px; z-index: 1000; border: 1px solid rgba(255,255,255,0.7);">
-            <span id="page-indicator">1 / 2</span>
-          </div>
-        
-        <!-- Case 1 Content -->
-        <div id="case-1-content">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Identity-Consistent Video Generation/video_person1_000_0.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="82.4%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/ConsisID/video_person1_000_0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">ConsisID</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: -1.2rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/Concat-ID/video_person1_000_0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Concat-ID</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/LumosX/video_person1_000_0_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 2 Content -->
-        <div id="case-2-content" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Identity-Consistent Video Generation/video_person1_120_0.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="82.4%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/ConsisID/video_person1_120_0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">ConsisID</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: -1.2rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/Concat-ID/video_person1_120_0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Concat-ID</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/LumosX/video_person1_120_0_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-         <!-- Case 3 Content -->
-         <div id="case-3-content" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Identity-Consistent Video Generation/video_person1_170_1.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="82.4%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/ConsisID/video_person1_170_1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">ConsisID</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: -1.2rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/Concat-ID/video_person1_170_1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Concat-ID</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/LumosX/video_person1_170_1_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-        
-        </div> <!-- Close arrow navigation container -->
-      </div>
-    </section>
-
-    <!-- Second Results Section -->
-    <div style="margin-top: -2rem;">
-  <div class="container is-max-desktop">
-        <!-- Arrow Navigation -->
-        <div style="position: relative; margin-bottom: 1rem; min-height: 400px;">
-          <!-- Left Arrow -->
-          <button id="prev-arrow-2" class="arrow-btn" onclick="if(currentCase2 > 1) showCase2(currentCase2 - 1)" style="position: absolute; left: -70px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            ←
-          </button>
-          
-          <!-- Right Arrow -->
-          <button id="next-arrow-2" class="arrow-btn" onclick="if(currentCase2 < 3) showCase2(currentCase2 + 1)" style="position: absolute; right: -70px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            →
-          </button>
-          
-          <!-- Page Indicator -->
-          <div style="position: absolute; top: -10px; right: -20px; background: rgba(0,0,0,0.6); color: white; padding: 6px 12px; border-radius: 15px; font-size: 12px; z-index: 1000; border: 1px solid rgba(255,255,255,0.7);">
-            <span id="page-indicator-2">1 / 3</span>
-          </div>
-        
-        <!-- Case 1 Content -->
-        <div id="case-1-content-2">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Identity-Consistent Video Generation/video_person2_101_1.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/SkyReels/video_person2_101_1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/Phantom/video_person2_101_1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/LumosX/video_person2_101_1_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 2 Content -->
-        <div id="case-2-content-2" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Identity-Consistent Video Generation/video_person2_182_0.png" width="100%" alt="Shared Image" class="responsive-image">
-      </div>
-
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/SkyReels/video_person2_182_0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/Phantom/video_person2_182_0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/LumosX/video_person2_182_0_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>          
-        </div>
-
-        <!-- Case 3 Content -->
-        <div id="case-3-content-2" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Identity-Consistent Video Generation/video_person3_009_2.png" width="100%" alt="Shared Image" class="responsive-image">
-      </div>
-
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/SkyReels/video_person3_009_2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/Phantom/video_person3_009_2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Identity-Consistent Video Generation/LumosX/video_person3_009_2_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-        
-        </div> <!-- Close arrow navigation container -->
-      </div>
-    </div>
-
-  <!-- Subject-Consistent Video Generation Section -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Results Section -->
-      <h2 class="title is-3 has-text-centered">Subject-Consistent Video Generation</h2>
-    <!-- First Subject-Consistent Video Generation Section -->
-      <div class="container is-max-desktop">
-        <!-- Arrow Navigation -->
-        <div style="position: relative; margin-bottom: 1rem; min-height: 400px;">
-          <!-- Left Arrow -->
-          <button id="prev-arrow-subject-2" class="arrow-btn" onclick="if(currentCaseSubject2 > 1) showCaseSubject2(currentCaseSubject2 - 1)" style="position: absolute; left: -70px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            ←
-          </button>
-          
-          <!-- Right Arrow -->
-          <button id="next-arrow-subject-2" class="arrow-btn" onclick="if(currentCaseSubject2 < 4) showCaseSubject2(currentCaseSubject2 + 1)" style="position: absolute; right: -70px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            →
-          </button>
-          
-          <!-- Page Indicator -->
-          <div style="position: absolute; top: -10px; right: -20px; background: rgba(0,0,0,0.6); color: white; padding: 6px 12px; border-radius: 15px; font-size: 12px; z-index: 1000; border: 1px solid rgba(255,255,255,0.7);">
-            <span id="page-indicator-subject-2">1 / 4</span>
-          </div>
-        
-        <!-- Case 1 Content -->
-        <div id="case-1-content-subject-2">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person1_003.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person1_003.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person1_003.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person1_003_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 2 Content -->
-        <div id="case-2-content-subject-2" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person2_039.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person2_039.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person2_039.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person2_039_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 3 Content -->
-        <div id="case-3-content-subject-2" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person2_188.png" width="100%" alt="Shared Image" class="responsive-image">
-  </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person2_188.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person2_188.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person2_188_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 4 Content -->
-        <div id="case-4-content-subject-2" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person3_020.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person3_020.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person3_020.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person3_020_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-        
-        </div> <!-- Close arrow navigation container -->
-      </div>
-    </div>
-
-    <div style="margin-top: -0.5rem;">
-
-        
-        <!-- Arrow Navigation -->
-        <div style="position: relative; margin-bottom: 0; min-height: 400px;">
-          <!-- Left Arrow -->
-          <button id="prev-arrow-subject" class="arrow-btn" onclick="if(currentCaseSubject > 1) showCaseSubject(currentCaseSubject - 1)" style="position: absolute; left: -70px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            ←
-          </button>
-          
-          <!-- Right Arrow -->
-          <button id="next-arrow-subject" class="arrow-btn" onclick="if(currentCaseSubject < 4) showCaseSubject(currentCaseSubject + 1)" style="position: absolute; right: -70px; top: 50%; transform: translateY(-80%); background: rgba(0,0,0,0.6); color: white; border: 2px solid white; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; z-index: 1000; font-size: 24px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-            →
-          </button>
-          
-          <!-- Page Indicator -->
-          <div style="position: absolute; top: -10px; right: -20px; background: rgba(0,0,0,0.6); color: white; padding: 6px 12px; border-radius: 15px; font-size: 12px; z-index: 1000; border: 1px solid rgba(255,255,255,0.7);">
-            <span id="page-indicator-subject">1 / 4</span>
-          </div>
-        
-        <!-- Case 1 Content -->
-        <div id="case-1-content-subject">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person2_023.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person2_023.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person2_023.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person2_023_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 2 Content -->
-        <div id="case-2-content-subject" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person2_000.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person2_000.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person2_000.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person2_000_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 3 Content -->
-        <div id="case-3-content-subject" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person2_002.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person2_002.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person2_002.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person2_002_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Case 4 Content -->
-        <div id="case-4-content-subject" style="display: none;">
-          <!-- Shared Image -->
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <img src="static/images/Subject-Consistent Video Generation/video_person2_001.png" width="100%" alt="Shared Image" class="responsive-image">
-          </div>
-          
-          <!-- Video Results Row -->
-          <div class="columns is-multiline is-gapless" style="margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: -1rem;">
-            <div class="column is-4" style="padding: 0; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Skyreels/video_person2_001.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">SkyReels-A2</h3>
-            </div>
-            <div class="column is-4" style="padding: 0; margin: 0; margin-left: 0rem;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/Phantom/video_person2_001.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Phantom</h3>
-            </div>
-            <div class="column is-4" style="padding: 0rem; margin: 0;">
-              <div class="content has-text-centered">
-                <video width="95%" controls autoplay muted loop style="position: relative; z-index: 9999;">
-                  <source src="static/videos/Subject-Consistent Video Generation/LumosX/video_person2_001_sp1_480x832.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 class="title is-6 has-text-centered" style="margin-top: -1.5rem; margin-bottom: 0;">Lumos𝒳</h3>
-            </div>
-          </div>
-        </div>
-        
-        </div> <!-- Close arrow navigation container -->
-  </div>
-</section>
-
-<!-- Data Collection Pipeline Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Data Collection Pipeline</h2>
-    <div class="content has-text-centered">
-      <img src="static/images/dataset.png" width="100%" alt="Data Collection Pipeline" class="responsive-image">
-    </div>
-    <div class="content has-text-justified" style="margin-top: 1rem;">
-      <p>Dataset construction pipeline for personalized multi-subject video generation. We build the training dataset from raw videos in three steps: (1) generate a caption and detect human subjects in extracted frames; (2) retrieve entity words from the caption and match subjects with their attributes; (3) use these entity tags to localize and segment target subjects and objects, producing a clean background image.</p>
-    </div>
   </div>
 </section>
 
@@ -1074,18 +230,470 @@
       <img src="static/images/main.png" width="100%" alt="Method Pipeline" class="responsive-image">
     </div>
     <div class="content has-text-justified" style="margin-top: 1rem;">
-      <p><strong>Overview of Lumos𝒳.</strong> Built on the Wan2.1-T2V model, our framework encodes all condition images into image tokens via a VAE encoder, concatenates them with denoising video tokens, and feeds the result into DiT~\cite{peebles2023scalable} blocks. Within each block, the proposed Relational Self-Attention and Relational Cross-Attention enable causal conditional modeling, enhance visual token representations, and ensure precise face–attribute alignment.</p>
+      <p>Overview of Lumos-Nexus. (a): The connector and small generator are fine-tuned within the connector-based video unified model during training. (b): inference performs Unified Progressive Frequency Bridging (UPFB) to combine the small generator's semantic guidance with high-fidelity details from the large generator for high-quality video generation.</p>
     </div>
   </div>
 </section>
 
+<!-- VR-Bench Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">VR-Bench</h2>
+    <div class="content has-text-centered">
+      <img src="static/images/vr-bench.png" width="100%" alt="VR-Bench" class="responsive-image">
+    </div>
+    <div class="content has-text-justified" style="margin-top: 1rem;">
+      <p> VR-Bench covers three hierarchical categories: (1) <strong>High-Level Physical World Reasoning</strong>, capturing physical dynamics and material interactions;
+        (2) <strong>High-Level Commonsense Reasoning</strong>, assessing causal, cultural, and abstract behavioral understanding; and (3) <strong>Embodied Physical Reasoning</strong>, focusing on motion coherence and grounded physical interactions. </p>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="vr-embodied">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Embodied Physical Reasoning</h2>
+        <div class="vr-task-carousel" data-interval-ms="9000">
+          <div class="vr-task-carousel-viewport">
+            <div class="vr-task-carousel-slide is-active">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--embodied">
+                    <span class="vr-task-badge__abbr">BBR</span>
+                    <span class="vr-task-badge__name">Biological Behavior Reasoning</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/Embodied Physical Reasoning/BBR.png" alt="BBR" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/BBR/BBR_012_wan1.3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/BBR/BBR_012_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/BBR/BBR_012_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/BBR/BBR_012_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-task-carousel-slide">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--embodied">
+                    <span class="vr-task-badge__abbr">CAC</span>
+                    <span class="vr-task-badge__name">Concurrent Action Coordination</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/Embodied Physical Reasoning/CAC.png" alt="CAC" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/CAC/CA_025_wan_1_3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/CAC/CA_025_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/CAC/CA_025_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/Embodied Physical Reasoning/CAC/CA_025_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vr-task-carousel-dots has-text-centered" role="tablist" aria-label="Embodied task carousel"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="vr-commonsense">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">High-Level Commonsense Reasoning</h2>
+        <div class="vr-task-carousel" data-interval-ms="9000">
+          <div class="vr-task-carousel-viewport">
+            <div class="vr-task-carousel-slide is-active">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--commonsense">
+                    <span class="vr-task-badge__abbr">CCR</span>
+                    <span class="vr-task-badge__name">Cultural Commonsense Reasoning</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/High-Level Commonsense Reasoning/CCR.png" alt="CCR" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CCR/CCR_023_wan1.3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CCR/CCR_023_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CCR/CCR_023_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CCR/CCR_023_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-task-carousel-slide">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--commonsense">
+                    <span class="vr-task-badge__abbr">CAR</span>
+                    <span class="vr-task-badge__name">Conceptual Action Reasoning</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/High-Level Commonsense Reasoning/CAR.png" alt="CAR" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CAR/CAR_025_wan_1_3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CAR/CAR_025_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CAR/CAR_025_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/CAR/CAR_025_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-task-carousel-slide">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--commonsense">
+                    <span class="vr-task-badge__abbr">PCR</span>
+                    <span class="vr-task-badge__name">Preventive Causal Reasoning</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/High-Level Commonsense Reasoning/PCR.png" alt="PCR" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/PCR/PCR_029_wan13.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/PCR/PCR_029_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/PCR/PCR_029_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Commonsense Reasoning/PCR/PCR_029_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vr-task-carousel-dots has-text-centered" role="tablist" aria-label="Commonsense task carousel"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="vr-physical-world">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">High-Level Physical World Reasoning</h2>
+        <div class="vr-task-carousel" data-interval-ms="9000">
+          <div class="vr-task-carousel-viewport">
+            <div class="vr-task-carousel-slide is-active">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--physical">
+                    <span class="vr-task-badge__abbr">DRF</span>
+                    <span class="vr-task-badge__name">Dynamic Reference Frame</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/High-Level Physical World Reasoning/DRF.png" alt="DRF" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/DRF/DRF_011_wan1.3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/DRF/DRF_011_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/DRF/DRF_011_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/DRF/DRF_011_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-task-carousel-slide">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--physical">
+                    <span class="vr-task-badge__abbr">ETV</span>
+                    <span class="vr-task-badge__name">Energy Transfer Visualization</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/High-Level Physical World Reasoning/ETV.png" alt="ETV" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/ETV/ETV_006_wan13.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/ETV/ETV_006_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/ETV/ETV_006_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/ETV/ETV_006_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-task-carousel-slide">
+              <div class="vr-bench-task">
+                <div class="has-text-centered" style="margin-bottom: 0.75rem;">
+                  <span class="vr-task-badge vr-task-badge--physical">
+                    <span class="vr-task-badge__abbr">MMC</span>
+                    <span class="vr-task-badge__name">Material Memory Consistency</span>
+                  </span>
+                </div>
+                <div class="content has-text-centered" style="margin-bottom: 1rem;">
+                  <img src="static/images/High-Level Physical World Reasoning/MMC.png" alt="MMC" class="responsive-image" style="max-width: 640px; width: 100%;">
+                </div>
+                <div class="columns is-multiline is-mobile is-variable is-1">
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-1.3B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/MMC/MMC_003_wan_1_3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Wan2.1-14B</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/MMC/MMC_003_wan14.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Omni-Video</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/MMC/MMC_003_omnivideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                  <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                    <p class="has-text-centered is-size-7 mb-2"><strong>Lumos-Nexus</strong></p>
+                    <div class="content has-text-centered">
+                      <video width="100%" controls autoplay muted loop playsinline preload="metadata" class="vr-bench-video">
+                        <source src="static/videos/High-Level Physical World Reasoning/MMC/MMC_003_lumos2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vr-task-carousel-dots has-text-centered" role="tablist" aria-label="Physical world task carousel"></div>
+        </div>
+      </div>
+    </section>
 <!-- More Visualizations Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">More Visualizations</h2>
     <div class="content has-text-centered">
-      <video width="100%" controls muted loop style="max-width: 800px;">
-        <source src="static/videos/LumosX_ppt.mp4" type="video/mp4">
+      <video width="100%" controls autoplay muted loop playsinline style="max-width: 800px;">
+        <source src="static/videos/Nexus-Vid_ppt.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -1096,7 +704,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{xing2026lumosx,
-      title={LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation},
+      title={{Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models}},
       author={Xing, Jiazheng and Du, Fei and Yuan, Hangjie and Liu, Pengwei and Xu, Hongbin and Ci, Hai and Niu, Ruigang and Chen, Weihua and Wang, Fan and Liu, Yong},
       journal={arXiv preprint arXiv:2603.20192},
       year={2026}
@@ -1136,6 +744,75 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  function pauseVideosIn(root) {
+    root.querySelectorAll('video').forEach(function (v) {
+      v.pause();
+    });
+  }
+  function playVideosIn(root) {
+    root.querySelectorAll('video').forEach(function (v) {
+      v.play().catch(function () {});
+    });
+  }
+  function initCarousel(carousel) {
+    var slides = carousel.querySelectorAll('.vr-task-carousel-slide');
+    var dotsHost = carousel.querySelector('.vr-task-carousel-dots');
+    if (!slides.length || !dotsHost) return;
+    var interval = parseInt(carousel.getAttribute('data-interval-ms'), 10) || 9000;
+    var i = 0;
+    var dots = [];
+    slides.forEach(function (_, idx) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'vr-task-carousel-dot' + (idx === 0 ? ' is-active' : '');
+      b.setAttribute('aria-label', 'Task ' + (idx + 1));
+      b.addEventListener('click', function () {
+        go(idx);
+        resetTimer();
+      });
+      dotsHost.appendChild(b);
+      dots.push(b);
+    });
+    function go(n) {
+      pauseVideosIn(carousel);
+      slides.forEach(function (s, idx) {
+        s.classList.toggle('is-active', idx === n);
+        dots[idx].classList.toggle('is-active', idx === n);
+      });
+      i = n;
+      var active = carousel.querySelector('.vr-task-carousel-slide.is-active');
+      if (active) playVideosIn(active);
+    }
+    var timer;
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () {
+        go((i + 1) % slides.length);
+      }, interval);
+    }
+    go(0);
+    resetTimer();
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        clearInterval(timer);
+        document.querySelectorAll('.vr-task-carousel video').forEach(function (v) {
+          v.pause();
+        });
+      } else {
+        var active = carousel.querySelector('.vr-task-carousel-slide.is-active');
+        if (active) playVideosIn(active);
+        resetTimer();
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.vr-task-carousel').forEach(initCarousel);
+  });
+})();
+</script>
 
 </body>
 </html>

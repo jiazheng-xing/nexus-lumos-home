@@ -133,6 +133,201 @@ body {
   font-size: smaller;
 }
 
+/* Lumos-Nexus paper header (title + authors block) */
+.paper-header.hero {
+  background-color: #ebe7f3;
+}
+
+.paper-header .publication-title {
+  color: #000;
+  font-weight: 700;
+}
+
+.paper-header .publication-authors {
+  color: #1a1a7a;
+  font-weight: 700;
+}
+
+.paper-header .publication-authors a {
+  color: #1a1a7a !important;
+}
+
+.paper-header .publication-affiliations,
+.paper-header .author-footnotes {
+  color: #1a1a7a;
+  font-weight: 400;
+}
+
+.paper-header .author-footnotes {
+  font-size: 0.95rem;
+}
+
+.paper-header .author-emails {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #1a1a7a;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.paper-header-title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem 1.25rem;
+  flex-wrap: wrap;
+  margin: 0 auto 1.25rem;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.paper-header-logo {
+  width: 110px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  order: 0;
+}
+
+.paper-header-title-row .publication-title {
+  flex: 1 1 16rem;
+  min-width: 0;
+  margin: 0 !important;
+  max-width: 52rem;
+  text-align: left;
+  order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .paper-header-logo {
+    width: 88px;
+  }
+}
+
+/* VR-Bench comparison videos */
+.vr-bench-video {
+  border-radius: 6px;
+  max-height: 420px;
+  background: #000;
+}
+
+/* Task badges (book-style: outline + light hatch fill) */
+.vr-task-badge {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.4rem 1.1rem 0.45rem;
+  border-radius: 999px;
+  border: 2px solid var(--vr-badge-border, #888);
+  color: #1a1a2e;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  background-image:
+    repeating-linear-gradient(
+      -52deg,
+      transparent,
+      transparent 4px,
+      rgba(0, 0, 0, 0.035) 4px,
+      rgba(0, 0, 0, 0.035) 5px
+    ),
+    linear-gradient(var(--vr-badge-fill, #f5f5f5), var(--vr-badge-fill, #f5f5f5));
+}
+
+.vr-task-badge__abbr {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.vr-task-badge__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  opacity: 0.92;
+  max-width: 22rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .vr-task-badge__name {
+    text-align: left;
+  }
+}
+
+.vr-task-badge--embodied {
+  --vr-badge-border: #d4897a;
+  --vr-badge-fill: #fde8e4;
+}
+
+.vr-task-badge--commonsense {
+  --vr-badge-border: #5a9fd4;
+  --vr-badge-fill: #e8f4fc;
+}
+
+.vr-task-badge--physical {
+  --vr-badge-border: #8b7ec8;
+  --vr-badge-fill: #ede9f7;
+}
+
+/* Auto-rotating task carousel within each VR-Bench category */
+.vr-task-carousel {
+  margin-top: 0.5rem;
+}
+
+.vr-task-carousel-viewport {
+  position: relative;
+  min-height: 1px;
+}
+
+.vr-task-carousel-slide {
+  display: none;
+  animation: vr-fade-in 0.45s ease;
+}
+
+.vr-task-carousel-slide.is-active {
+  display: block;
+}
+
+@keyframes vr-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.vr-task-carousel-dots {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.vr-task-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid #b5b5b5;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.vr-task-carousel-dot:hover {
+  transform: scale(1.15);
+  border-color: #888;
+}
+
+.vr-task-carousel-dot.is-active {
+  background: #485fc7;
+  border-color: #485fc7;
+}
+
 .section {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
